@@ -1,5 +1,4 @@
 from typing import List
-from random import randint
 
 def ordenar(arr: List[int]) -> List[int]:
     tamaño = len(arr)
