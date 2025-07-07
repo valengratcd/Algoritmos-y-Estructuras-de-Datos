@@ -1,1 +1,1 @@
-range(len(arr))
+    arr = arr[::-1]
