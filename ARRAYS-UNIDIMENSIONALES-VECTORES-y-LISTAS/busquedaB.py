@@ -28,7 +28,7 @@ def busquedaB(arr: List[int], num: int) -> int:
 
 def main():
     arreglo1 = [1,2,3]
-    print(busquedaB(arreglo1, 4))
+    print(busquedaB(arreglo1, None))
 
 if __name__ == "__main__":
     main()

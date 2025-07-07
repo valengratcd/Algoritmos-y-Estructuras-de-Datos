@@ -13,7 +13,6 @@ def max_elmento_columna_mat(mat) -> int:
             elif transpuesta[i][j] > columna[1]:
                 columna[1] = transpuesta[i][j]
                 columna[0] = i + 1
-
     return columna[0]
 
 def main():
