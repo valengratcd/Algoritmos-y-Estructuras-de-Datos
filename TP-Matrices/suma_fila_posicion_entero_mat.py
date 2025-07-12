@@ -1,4 +1,4 @@
-def posicion_entero_mat(mat, num: int) -> int:
+def suma_fila_posicion_entero(mat, num: int) -> int:
     if not mat[num] or num is None:
         return -100
     
@@ -14,7 +14,7 @@ def main():
         [4,5,6],
         [3,8,9]
     ]
-    print(posicion_entero_mat(matrix, 1))
+    print(suma_fila_posicion_entero(matrix, 1))
 
 if __name__ == "__main__":
     main()
