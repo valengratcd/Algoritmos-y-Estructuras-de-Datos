@@ -5,7 +5,7 @@ def inscritos_cursos(curso, est):
         conj = list(conj)
         for conjunto in conj:
             if conjunto == curso:
-                inscritos.append(f"Estudiante escrito a {curso}: {key}")
+                inscritos.append(key)
         conj = set(conj)
 
     return inscritos
@@ -17,7 +17,7 @@ def main():
         'María': {'biologia', 'matematicas'},
         'Jorge': {'arte', 'musica'}
     }
-    print(inscritos_cursos("matematicas", estudiantes))
+    print("Estudiantes inscritos a matematicas: ", inscritos_cursos("matematicas", estudiantes))
 
 if __name__ == "__main__":
     main()
