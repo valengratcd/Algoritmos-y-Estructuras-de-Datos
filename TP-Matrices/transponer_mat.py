@@ -1,5 +1,5 @@
 def transponer_mat(mat):
-    return list(list(i)for i in zip(*mat))
+    return list(list(i) for i in zip(*mat))
 
 def main():
     matrix = [
