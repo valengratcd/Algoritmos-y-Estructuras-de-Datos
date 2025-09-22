@@ -6,3 +6,5 @@
 
 # Ignorar la carpeta .vscode en la raíz del proyecto
 .vscode/
+
+*.db
