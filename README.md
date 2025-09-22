@@ -1,5 +1,5 @@
 # Proyecto-Integrador
-## Caracteristicas
+## Caracteristicas:
 - GESTIONAR UNA PLAY STORE
 
 - BAJO TRES MODELOS DIFERENTES DE CELULARES
