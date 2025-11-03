@@ -1,5 +1,6 @@
-import pandas as pd
 import numpy as np
+import pandas as pd
+from pandas.api.types import is_numeric_dtype
 
 import mysql.connector
 from mysql.connector import Error
@@ -70,7 +71,7 @@ def formato_tiempo_legible(series_timedelta: pd.Series) -> pd.Series:
     # Aplicar la función de conversión a los segundos totales de la Series
     return series_timedelta.dt.total_seconds().apply(convertir_segundos)
 
-def modificar_nulos(df: pd.DataFrame) -> pd.DataFrame:
+def modificar_na(df: pd.DataFrame) -> None:
     """
     Verifica valores nulos por cada columna numerica del dataframe 
     y los modifica por el valor promedio (Mean).
@@ -79,10 +80,14 @@ def modificar_nulos(df: pd.DataFrame) -> pd.DataFrame:
         df (pd.DataFrame): El dataframe a remplazar.
     
     Returns:
-        pd.DataFrame: El dataframe remplazado por los promedios.
+        None: El dataframe remplazado por los promedios.
     """
-    for i in df.index:
-        print(i.str.isnumeric())
+    for s in df.columns:
+        # s_numeric = pd.to_numeric(s, errors='coerce')
+        es_numerico = is_numeric_dtype(df[s].dtype)
+        if es_numerico:
+            promedio = df[s].mean()
+            df[s].fillna(promedio, inplace=True)
 
 def obtener_dataframe_desde_mysql(query):
     """
