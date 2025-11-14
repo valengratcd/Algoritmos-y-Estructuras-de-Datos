@@ -6,3 +6,6 @@
 
 # Ignorar la carpeta .vscode en la raíz del proyecto
 .vscode/
+
+# Ignorar archivos .png en cualquier parte del proyecto
+**/.png
